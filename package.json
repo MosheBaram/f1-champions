@@ -20,7 +20,6 @@
   "scripts": {
     "start": "yarn && react-scripts start",
     "build": "yarn && react-scripts build",
-    "test": "react-scripts test",
     "prettify": "yarn pretty-quick"
   },
   "eslintConfig": {

@@ -47,7 +47,6 @@ const Details = ({ match }) => {
           </tr>
         </thead>
         {yearData.map((yearlyResult) => {
-          console.log("yearlyResult!", yearlyResult);
           const { raceName, date, Results } = yearlyResult;
           const firstItemResults = Results?.[0] ?? {};
           const { Driver, FastestLap } = firstItemResults ?? {};

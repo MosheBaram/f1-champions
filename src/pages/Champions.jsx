@@ -48,7 +48,6 @@ const Champions = () => {
                 <tr
                   key={year}
                   onClick={() => {
-                    console.log("Clicked!", year, driverId);
                     history.push(`/details/${year}/${driverId}`);
                   }}
                 >
