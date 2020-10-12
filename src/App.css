@@ -3,6 +3,28 @@
 .App {
   font-family: "Roboto", sans-serif;
   text-align: center;
+  min-height: 100vh;
+
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 100%);
+  color: #fff;
+}
+
+h1 {
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+a {
+  color: #fff;
+}
+
+.table-responsive .table {
+  margin: 0 auto;
+  padding: 15px;
+  background: #fff;
+  color: #212529;
+  border-radius: 0.25rem;
 }
 
 .table-responsive .table {
@@ -16,9 +38,14 @@
 }
 
 .table-responsive .hover-effect.table tbody tr:hover {
-  outline: 1px dotted #000;
+  outline: 1px dotted #212529;
 }
 
 .winner {
   outline: 2px solid gold;
+}
+
+.winner-icon {
+  margin-right: 8px;
+  color: gold;
 }

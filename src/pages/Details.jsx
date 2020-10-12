@@ -3,6 +3,8 @@ import { AppContext } from "../AppContext";
 import { GetYearlyResults } from "../Api";
 import { Table } from "reactstrap";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 
 const Details = ({ match }) => {
   const appContext = useContext(AppContext);
@@ -33,10 +35,6 @@ const Details = ({ match }) => {
 
   return (
     <div>
-      <div>
-        <Link to="/">Back to champions list</Link>
-      </div>
-
       <h1>Formula 1 winners of {year}</h1>
 
       <Table responsive>
@@ -56,11 +54,13 @@ const Details = ({ match }) => {
           const { givenName, familyName, driverId: currentDriverId } = Driver ?? {};
           const { Time } = FastestLap ?? {};
           const { time } = Time ?? {};
+          const isWinner = driverId === currentDriverId;
 
           return (
             <tbody>
-              <tr key={date} className={driverId === currentDriverId ? "winner" : ""}>
+              <tr key={date} className={isWinner ? "winner" : ""}>
                 <th>
+                  {isWinner && <FontAwesomeIcon className="winner-icon" icon={faTrophy} />}
                   {givenName} {familyName}
                 </th>
                 <td>{raceName}</td>
@@ -71,6 +71,11 @@ const Details = ({ match }) => {
           );
         })}
       </Table>
+
+      <div>
+        <br />
+        <Link to="/">Back to champions list</Link>
+      </div>
     </div>
   );
 };
