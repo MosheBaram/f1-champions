@@ -36,7 +36,9 @@ const Details = ({ match }) => {
       <div>
         <Link to="/">Back to champions list</Link>
       </div>
-      Details! {year} {driverId}
+
+      <h1>Formula 1 winners of {year}</h1>
+
       <Table responsive>
         <thead>
           <tr>

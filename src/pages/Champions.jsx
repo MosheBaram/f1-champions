@@ -24,8 +24,9 @@ const Champions = () => {
 
   return (
     <div>
-      Champions!
-      <Table responsive>
+      <h1>Formula 1 Champions - 2005-2015</h1>
+
+      <Table responsive className="hover-effect">
         <thead>
           <tr>
             <th>Year</th>

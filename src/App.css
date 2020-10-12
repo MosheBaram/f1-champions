@@ -1,5 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
 .App {
+  font-family: "Roboto", sans-serif;
   text-align: center;
+}
+
+.table-responsive .table {
+  margin: 0 auto;
+}
+
+.table-responsive .table th,
+.table-responsive .table td {
+  margin: 5px;
+  padding: 5px;
+}
+
+.table-responsive .hover-effect.table tbody tr:hover {
+  outline: 1px dotted #000;
 }
 
 .winner {
